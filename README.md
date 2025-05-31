@@ -108,7 +108,8 @@ Set up Prometheus as a data source in Grafana to visualize your Flask app metric
 ---
 
  
-## ✉️ patelayush1929@gmail.com | ayushkumarp.29@gmail.com
+## ✉️ patelayush1929@gmail.com 
+## ✉️ ayushkumarp.29@gmail.com
 
 For any questions or improvements, feel free to open issues or reach out!
 
