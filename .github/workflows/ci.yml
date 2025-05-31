@@ -1,0 +1,28 @@
+name: CI
+
+on:
+    push:
+        branches: [ main ]
+
+jobs:
+    builds:
+        runs-on: ubuntu-latest
+    
+        steps:
+            - name: Checkout Code
+              uses: actions/checkout@v3
+            - name: Set up Python
+              uses: actions/setup-python@v4
+              with:
+                python-version: 3.11
+            
+            - name: Install dependencies
+              run: pip install -r requirements.txt
+            
+            - name: Run Flask app tests (simple check)
+              run: |
+                python-c "import app; print('App imported successfully')"
+            
+            - name: Build Docker Image
+              run: docker build -t monitoring-flask-app .
+        
